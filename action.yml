@@ -1,0 +1,16 @@
+name: 'Setup J Language'
+description: 'Used to interpret J source. Set up a specific version of the J interpreter.'
+author: 'IbzanHyena'
+inputs:
+  j-version:
+    description: 'Optional version to use. If not provided, will default to the latest non-beta version.'
+    required: true
+    default: '903'
+runs:
+  using: "composite"
+  steps:
+    - run: $GITHUB_ACTION_PATH/setup.sh 
+      shell: bash
+      env:
+        J_VERSION: ${{ inputs.j-version }}
+
