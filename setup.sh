@@ -2,6 +2,9 @@
 
 set -euxo pipefail
 
+sudo apt-get update
+sudo apt-get install -y wget
+
 wget "https://www.jsoftware.com/download/j${J_VERSION}/install/j${J_VERSION}_linux64.tar.gz"
 tar -xzf "j${J_VERSION}_linux64.tar.gz"
 
