@@ -12,7 +12,7 @@ pushd "j${J_VERSION}/bin"
   sudo bash -eux install-usr.sh
   TEMP=$(sudo ijconsole -js "echo jpath '~temp'" -js "exit ''")
   sudo mkdir -p "$TEMP"
-  sudo ijconsole -js "install 'all'" -js "exit''"
+  sudo ijconsole -js "install '$J_ADDONS'" -js "exit''"
 popd
 
 rm -rf "j${J_VERSION}_linux64.tar.gz" "j${J_VERSION}"

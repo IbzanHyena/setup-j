@@ -6,6 +6,9 @@ inputs:
     description: 'Optional version to use. If not provided, will default to the latest non-beta version.'
     required: true
     default: '903'
+  addons:
+    description: 'Addons to install. If not provided, installs all addons.'
+    default: 'all'
 runs:
   using: "composite"
   steps:
@@ -13,4 +16,5 @@ runs:
       shell: bash
       env:
         J_VERSION: ${{ inputs.j-version }}
+        J_ADDONS: ${{ inputs.addons }}
 
