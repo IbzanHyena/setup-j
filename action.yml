@@ -4,7 +4,6 @@ author: 'IbzanHyena'
 inputs:
   j-version:
     description: 'Optional version to use. If not provided, will default to the latest non-beta version.'
-    required: true
     default: '903'
   addons:
     description: 'Addons to install. If not provided, installs all addons.'
